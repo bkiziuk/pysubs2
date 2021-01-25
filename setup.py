@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 try:
     from setuptools import setup
@@ -21,7 +20,7 @@ setup(
         pysubs2 is a Python library for editing subtitle files.
         It’s based on *SubStation Alpha*, the native format of
         `Aegisub <http://www.aegisub.org/>`_; it also supports *SubRip (SRT)*,
-        *MicroDVD*, *MPL2* and *TMP* formats. There is a small CLI tool for batch conversion
+        *MicroDVD*, *MPL2*, *TMP* and *WebVTT* formats. There is a small CLI tool for batch conversion
         and retiming.
 
         ::
@@ -36,12 +35,10 @@ setup(
         """),
     classifiers = [
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Development Status :: 5 - Production/Stable",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Processing :: Markup",
@@ -51,5 +48,6 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License"
         ],
-    entry_points={'console_scripts': ['pysubs2 = pysubs2.cli:__main__']}
+    entry_points={'console_scripts': ['pysubs2 = pysubs2.cli:__main__']},
+    python_requires=">=3.7",
     )
